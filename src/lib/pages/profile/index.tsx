@@ -174,8 +174,6 @@ const Signup = () => {
     if (user) formik.setValues(user);
   }, [user]);
 
-  console.log(formik.errors);
-
   return (
     <Grid gap={4}>
       <Grid textAlign="center" gap={2}>

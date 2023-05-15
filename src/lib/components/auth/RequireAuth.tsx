@@ -15,14 +15,16 @@ const RequireAuth = ({
   redirectTo = "/login",
 }: PrivateRouteProps) => {
   // add your own authentication logic here
-  const [isLoggedIn, setIsLoggedIn] = useState(true);
+  const { setUser, isLoggedIn, setIsLoggedIn } = useContext(UserContext);
+  // const [isLoggedIn, setIsLoggedIn] = useState(true);
 
   const { login } = useContext(UserContext);
 
   const loggedIn = async () => {
     try {
       const res = await fetchUser();
-      console.log({ res });
+      setUser(res);
+      setIsLoggedIn(true);
     } catch (err) {
       notify("Failed to fetch user data!", "error");
     }

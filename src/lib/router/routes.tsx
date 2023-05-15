@@ -1,3 +1,4 @@
+import Home from "lib/pages/home/Home";
 import React from "react";
 import type { PathRouteProps } from "react-router-dom";
 
@@ -20,5 +21,9 @@ export const privateRoutes: Array<PathRouteProps> = [
   {
     path: "/profile",
     element: <Profile />,
+  },
+  {
+    path: "/home",
+    element: <Home />,
   },
 ];

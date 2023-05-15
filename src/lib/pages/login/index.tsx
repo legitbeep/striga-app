@@ -35,14 +35,14 @@ const Login = () => {
   const handleSubmit = async (values: typeof initValues) => {
     try {
       const response = await mutate(values);
-      console.log({ response });
+      // console.log({ response });
       if (isSuccess(response)) {
         notify("Logged In!", "success");
         setItemInStorage(KEYS.tokenStorage, {
           ...response?.data,
           expiration: new Date().getTime() + 30 * 60000,
         });
-        navigate("/profile");
+        navigate("/home");
       }
     } catch (err: any) {
       console.log({ err });

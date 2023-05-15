@@ -40,6 +40,7 @@
   },
   "devDependencies": {
     "@commitlint/config-conventional": "^17.6.1",
+    "@rollup/plugin-replace": "^5.0.2",
     "@types/node": "^18.16.2",
     "@types/react": "18.2.0",
     "@types/react-datepicker": "^4.11.2",
